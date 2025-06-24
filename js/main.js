@@ -29,8 +29,6 @@ function chooseDoor(door) {
   alert(
     `Has elegido el camino "${gameState.path}" y la puerta "${gameState.door}".\nPrepárate para lo que viene...`
   );
-  
-  // Ejemplo: podrías continuar con otro switchTo("level3") si creas esa sección
 }
 
 
