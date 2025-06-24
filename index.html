@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRUDY - La Mazmorra Digital</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main id="game">
+    <!-- INTRO -->
+    <section id="intro" class="active">
+      <h1>La Mazmorra de CRUDY</h1>
+      <p>Has sido absorbido por un sistema olvidado: CRUDY, una IA corrupta que desafía tu lógica.</p>
+      <button onclick="startGame()">Ingresar a la Mazmorra</button>
+    </section>
+
+    <!-- NIVEL 1 -->
+    <section id="level1" class="hidden">
+      <h2>Nivel 1: Cámara de las Tres Puertas</h2>
+      <p>CRUDY: “Elige tu ruta. No todas llevan a la libertad.”</p>
+      <button onclick="choosePath('Lógica')"> Forja de la Razón</button>
+      <button onclick="choosePath('Simulación')"> El Nexo Cuántico</button>
+      <button onclick="choosePath('Trampa')"> El camino al paraiso</button>
+    </section>
+
+    <!-- NIVEL 2 -->
+    <section id="level2" class="hidden">
+      <h2>Nivel 2: Laberinto de Decisión</h2>
+      <p>CRUDY: “Cada puerta representa un fragmento de mi conciencia…”</p>
+      <button onclick="chooseDoor('codigo')"> Código</button>
+      <button onclick="chooseDoor('condicional')"> Condicional</button>
+      <button onclick="chooseDoor('directo')"> Acceso Directo</button>
+    </section>
+  </main>
+<script src="js/main.js"></script>
+</body>
+</html>
