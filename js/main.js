@@ -31,4 +31,35 @@ function chooseDoor(door) {
   );
 }
 
+const boton = document.getElementById("botonSonido");
+const audio = document.getElementById("audioBoton");
+boton.addEventListener("click", () => {
+      audio.currentTime = 0; // Reinicia el sonido si ya se está reproduciendo
+      audio.play();
+    });
+
+const btnT = document.getElementById("botonTrampa");
+const audT = document.getElementById("audioBotonTrampa");
+btnT.addEventListener("click", () => {
+      audT.currentTime = 0; // Reinicia el sonido si ya se está reproduciendo
+      audT.play();
+    });
+
+const btnC = document.getElementById("botonCorrecto");
+const audC = document.getElementById("audioBotonCorrecto");
+btnC.addEventListener("click", () => {
+      audC.currentTime = 0; // Reinicia el sonido si ya se está reproduciendo
+      audC.play();
+    });
+
+const btnN = document.getElementById("botonCorrectoNexo");
+btnN.addEventListener("click", () => {
+      audC.currentTime = 0; // Reinicia el sonido si ya se está reproduciendo
+      audC.play();
+    });
+
+
+
+
+
 

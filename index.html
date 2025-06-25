@@ -12,16 +12,19 @@
     <section id="intro" class="active">
       <h1>La Mazmorra de CRUDY</h1>
       <p>Has sido absorbido por un sistema olvidado: CRUDY, una IA corrupta que desafía tu lógica.</p>
-      <button onclick="startGame()">Ingresar a la Mazmorra</button>
+      <button onclick="startGame()" id="botonSonido">Ingresar a la Mazmorra</button>
+      <audio id="audioBoton" src="./assets/audios/scary-sound-effect-359877.mp3" preload="auto"></audio>
     </section>
 
     <!-- NIVEL 1 -->
     <section id="level1" class="hidden">
       <h2>Nivel 1: Cámara de las Tres Puertas</h2>
       <p>CRUDY: “Elige tu ruta. No todas llevan a la libertad.”</p>
-      <button onclick="choosePath('Lógica')"> Forja de la Razón</button>
-      <button onclick="choosePath('Simulación')"> El Nexo Cuántico</button>
-      <button onclick="choosePath('Trampa')"> El camino al paraiso</button>
+      <button onclick="choosePath('Lógica')" id="botonCorrecto"> Forja de la Razón</button>
+      <button onclick="choosePath('Simulación')" id="botonCorrectoNexo"> El Nexo Cuántico</button>
+      <button onclick="choosePath('Trampa')" id="botonTrampa"> El camino al paraiso</button>
+      <audio id="audioBotonCorrecto" src="./assets/audios/correct-2-46134.mp3" preload="auto"></audio>
+      <audio id="audioBotonTrampa" src="./assets/audios/negative_beeps-6008.mp3" preload="auto"></audio>
     </section>
 
     <!-- NIVEL 2 -->
