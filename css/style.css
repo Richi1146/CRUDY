@@ -1,3 +1,54 @@
+/* Fondo borroso */
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/images/background.png') center/cover no-repeat;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+/* Contenido centrado y visible */
+#game {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Fondo negro semi-transparente en secciones */
+#intro, #level1 {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Botones estilo neon */
+button.btn {
+  background-color: #00ffff;
+  color: #000;
+  margin: 0.5rem;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 0 8px #00ffff;
+  transition: 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #00cccc;
+  box-shadow: 0 0 16px #00ffff;
+}
+
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #0a0a0a;
