@@ -36,6 +36,37 @@
       <button onclick="chooseDoor('condicional')"> Condicional</button>
       <button onclick="chooseDoor('directo')"> Acceso Directo</button>
     </section>
+
+    <!-- NIVEL 3 -->
+    <section id="level3" class="hidden">
+      <h2> Nivel 3: Cámara del Eco Binario</h2>
+      <p>CRUDY: “Memoriza mi patrón… y repítelo.”</p>
+      <div id="sequenceDisplay"></div>
+      <div id="sequenceButtons" class="hidden">
+        <button onclick="selectColor('🔴')">🔴</button>
+        <button onclick="selectColor('🟢')">🟢</button>
+        <button onclick="selectColor('🔵')">🔵</button>
+        <button onclick="submitSequence()">Enviar</button>
+      </div>
+    </section>
+
+    <!-- NIVEL 4 -->
+    <section id="level4" class="hidden">
+      <h2> Nivel 4: Núcleo Fractal</h2>
+      <p>CRUDY: “Si A se activa, B se libera ¿Cuál es tu decisión?”</p>
+      <button onclick="fractalChoice('A')">Activar A</button>
+      <button onclick="fractalChoice('B')">Interrumpir B</button>
+      <button onclick="fractalChoice('C')">Forzar Salida C</button>
+    </section>
+
+    <!-- NIVEL 5 -->
+    <section id="level5" class="hidden">
+      <h2> Nivel 5: Núcleo Fractal</h2>
+      <p>CRUDY: “Si A se activa, B se libera ¿Cuál es tu decisión?”</p>
+      <button onclick="fractalChoice('A')">Activar A</button>
+      <button onclick="fractalChoice('B')">Interrumpir B</button>
+      <button onclick="fractalChoice('C')">Forzar Salida C</button>
+    </section>
   </main>
 <script src="js/main.js"></script>
 </body>
