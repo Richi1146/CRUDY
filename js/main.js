@@ -1,7 +1,9 @@
 // Estado del juego
 let gameState = {
   path: null,
-  door: null
+  door: null,
+  originalSequence: [],
+  playerSequence: [],
 };
 
 // Oculta todas las secciones y muestra solo una
@@ -31,31 +33,34 @@ function chooseDoor(door) {
   );
 }
 
-const boton = document.getElementById("botonSonido");
-const audio = document.getElementById("audioBoton");
-boton.addEventListener("click", () => {
-      audio.currentTime = 0; // Reinicia el sonido si ya se está reproduciendo
-      audio.play();
-    });
+function generateSequence (){
+  const colors =["🔴","🟢","🔵"];
+  gameState.originalSequence = [];
+  
+  for (let i = 0; i < 3; i++){
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    gameState.originalSequence.push(color);
+  }
+}
 
-const btnT = document.getElementById("botonTrampa");
-const audT = document.getElementById("audioBotonTrampa");
-btnT.addEventListener("click", () => {
-      audT.currentTime = 0; // Reinicia el sonido si ya se está reproduciendo
-      audT.play();
-    });
+const RUTA_AUDIO = './assets/audios/';
 
-const btnC = document.getElementById("botonCorrecto");
-const audC = document.getElementById("audioBotonCorrecto");
-btnC.addEventListener("click", () => {
-      audC.currentTime = 0; // Reinicia el sonido si ya se está reproduciendo
-      audC.play();
-    });
+function asignarAudiosABotones() {
+  const botonesConAudio = document.querySelectorAll('button[data-audio]');
 
-const btnN = document.getElementById("botonCorrectoNexo");
-btnN.addEventListener("click", () => {
-      audC.currentTime = 0; // Reinicia el sonido si ya se está reproduciendo
-      audC.play();
+  botonesConAudio.forEach(boton => {
+    boton.addEventListener('click', () => {
+      const archivo = boton.dataset.audio;
+      if (archivo) {
+        const sonido = new Audio(RUTA_AUDIO + archivo);
+        sonido.play();
+      }
+    });
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  asignarAudiosABotones();
     });
 
 
